@@ -3,7 +3,7 @@
 .idea/
 
 # build output
-redisClone        # the binary `go build` produces; use the module name
+redisClone
 *.exe
 *.test
 *.out
