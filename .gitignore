@@ -1,0 +1,14 @@
+# editor
+.vscode/
+.idea/
+
+# build output
+redisClone        # the binary `go build` produces; use the module name
+*.exe
+*.test
+*.out
+out
+
+# environment and OS
+.env
+.DS_Store
