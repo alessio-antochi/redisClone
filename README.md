@@ -79,12 +79,12 @@ redis-cli ──TCP──> listener ──> one goroutine per connection
 ## Benchmarks
 
 Machine: CPU: *i7-13650HX*, OS: *Arch Linux x86_64*.
-Command: `redis-benchmark -p 8080 -t SET,GET -n 10000 -c 50`, results as a range over 5 runs.
+Command: `redis-benchmark -p 8080 -t SET,GET -n 100000 -c 50`, results as a range over 5 runs.
 
 | | Throughput | p50 | p99 |
 | --- | --- | --- | --- |
-| SET | 131k-181k rps | 0.103-0.135 ms | 0.471-0.727 ms |
-| GET | 227k-263k rps | 0.103-0.111 ms | 0.159-0.263 ms |
+| SET | 230k-250k rps | 0.103 ms | 0.207-0.343 ms |
+| GET | 242k-253k rps | 0.103 ms | 0.207-0.223 ms |
 
 Figures are the range over 5 runs. `redis-benchmark` measures speed, not correctness; correctness under concurrent access is covered by the tests above.
 
